@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Raumplaner
 {
-    public partial class Räume : Form
+    public partial class Raumansicht : Form
     {
         public PictureBox Raumbild => img_Raum;
         public Label Raumname => lb_Raum;
-        public Räume()
+        public Raumansicht()
         {
             InitializeComponent();
         }

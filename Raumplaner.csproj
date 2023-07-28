@@ -53,6 +53,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Raumansicht.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,14 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Raumersteller.resx">
       <DependentUpon>Raumersteller.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,14 +104,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\Raumplan 3D %281%29.png" />
+    <None Include="Resources\Raum 2.0.7.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Raumplan 3D %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2.0.8.jpg" />
+    <None Include="Resources\Raum 2.0.8.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -26,19 +26,19 @@ namespace Raumplaner
 
         private void btn_Raum207_Click(object sender, EventArgs e)
         {
-            Räume raum = new Räume();
+            Raumansicht raum = new Raumansicht();
             raum.Text = (sender as Control).Text;
             raum.Show();
-            raum.Raumbild.Image = Image.FromFile("C:\\Users\\maxha\\source\\repos\\Raumplaner\\Pictures\\" + (sender as Control).Text + ".jpg");
+            raum.Raumbild.Image = Properties.Resources.Raum_2_0_7;
             raum.Raumname.Text = (sender as Control).Text;
         }
 
         private void btn_Raum208_Click(object sender, EventArgs e)
         {
-            Räume raum = new Räume();
+            Raumansicht raum = new Raumansicht();
             raum.Text = (sender as Control).Text;
             raum.Show();
-            raum.Raumbild.Image = Image.FromFile("C:\\Users\\maxha\\source\\repos\\Raumplaner\\Pictures\\" + (sender as Control).Text + ".jpg");
+            raum.Raumbild.Image = Properties.Resources.Raum_2_0_8;
             raum.Raumname.Text = (sender as Control).Text;
         }
 

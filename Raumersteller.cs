@@ -18,16 +18,17 @@ namespace Raumplaner
             InitializeComponent();
             baseForm = form;
         }
+     
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            baseForm.AddToRäumeList(new Raum(Properties.Resources.Raum_2_0_7, "Raum 2.0.7", 4, 2, true));
+            this.Dispose();
+        }
 
         private void img_Raum_Click(object sender, EventArgs e)
         {
             openFileDialog.ShowDialog();
-        }
-
-        private void btn_save_Click(object sender, EventArgs e)
-        {
-            baseForm.AddToRäumeList(new Raum(Image.FromFile("C:\\Users\\maxha\\source\\repos\\Raumplaner\\Pictures\\Raum 2.0.7.jpg"), "Raum 2.0.7", 4, 2, true));
-            this.Dispose();
         }
     }
 }

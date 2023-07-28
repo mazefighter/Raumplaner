@@ -1,6 +1,6 @@
 ﻿namespace Raumplaner
 {
-    partial class Räume
+    partial class Raumansicht
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Räume));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Raumansicht));
             this.img_Raum = new System.Windows.Forms.PictureBox();
             this.lb_Raum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.img_Raum)).BeginInit();
@@ -54,14 +54,14 @@
             this.lb_Raum.TabIndex = 1;
             this.lb_Raum.Text = "Raum:";
             // 
-            // Räume
+            // Raumansicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lb_Raum);
             this.Controls.Add(this.img_Raum);
-            this.Name = "Räume";
+            this.Name = "Raumansicht";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.img_Raum)).EndInit();
             this.ResumeLayout(false);

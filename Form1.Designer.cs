@@ -35,7 +35,7 @@
             this.anlegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Raum208 = new System.Windows.Forms.Button();
-            this.btn_Raum207 = new System.Windows.Forms.Button();
+            this.btn_207 = new System.Windows.Forms.Button();
             this.list_Räume = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -98,16 +98,16 @@
             this.btn_Raum208.UseVisualStyleBackColor = true;
             this.btn_Raum208.Click += new System.EventHandler(this.btn_Raum208_Click);
             // 
-            // btn_Raum207
+            // btn_207
             // 
-            this.btn_Raum207.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Raum207.Location = new System.Drawing.Point(92, 89);
-            this.btn_Raum207.Name = "btn_Raum207";
-            this.btn_Raum207.Size = new System.Drawing.Size(100, 50);
-            this.btn_Raum207.TabIndex = 1;
-            this.btn_Raum207.Text = "Raum 2.0.7";
-            this.btn_Raum207.UseVisualStyleBackColor = true;
-            this.btn_Raum207.Click += new System.EventHandler(this.btn_Raum207_Click);
+            this.btn_207.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_207.Location = new System.Drawing.Point(92, 89);
+            this.btn_207.Name = "btn_207";
+            this.btn_207.Size = new System.Drawing.Size(100, 50);
+            this.btn_207.TabIndex = 1;
+            this.btn_207.Text = "Raum 2.0.7";
+            this.btn_207.UseVisualStyleBackColor = true;
+            this.btn_207.Click += new System.EventHandler(this.btn_Raum207_Click);
             // 
             // list_Räume
             // 
@@ -124,7 +124,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.list_Räume);
             this.Controls.Add(this.btn_Raum208);
-            this.Controls.Add(this.btn_Raum207);
+            this.Controls.Add(this.btn_207);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
             this.Text = "5";
@@ -144,7 +144,7 @@
         private System.Windows.Forms.ToolStripMenuItem anlegenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
         private System.Windows.Forms.Button btn_Raum208;
-        private System.Windows.Forms.Button btn_Raum207;
+        private System.Windows.Forms.Button btn_207;
         private System.Windows.Forms.ListBox list_Räume;
     }
 }

@@ -34,9 +34,21 @@
             this.übersichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anlegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_Raum208 = new System.Windows.Forms.Button();
-            this.btn_207 = new System.Windows.Forms.Button();
             this.list_Räume = new System.Windows.Forms.ListBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,44 +99,109 @@
             this.löschenToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.löschenToolStripMenuItem.Text = "Löschen";
             // 
-            // btn_Raum208
-            // 
-            this.btn_Raum208.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Raum208.Location = new System.Drawing.Point(240, 89);
-            this.btn_Raum208.Name = "btn_Raum208";
-            this.btn_Raum208.Size = new System.Drawing.Size(100, 50);
-            this.btn_Raum208.TabIndex = 2;
-            this.btn_Raum208.Text = "Raum 2.0.8";
-            this.btn_Raum208.UseVisualStyleBackColor = true;
-            this.btn_Raum208.Click += new System.EventHandler(this.btn_Raum208_Click);
-            // 
-            // btn_207
-            // 
-            this.btn_207.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_207.Location = new System.Drawing.Point(92, 89);
-            this.btn_207.Name = "btn_207";
-            this.btn_207.Size = new System.Drawing.Size(100, 50);
-            this.btn_207.TabIndex = 1;
-            this.btn_207.Text = "Raum 2.0.7";
-            this.btn_207.UseVisualStyleBackColor = true;
-            this.btn_207.Click += new System.EventHandler(this.btn_Raum207_Click);
-            // 
             // list_Räume
             // 
             this.list_Räume.FormattingEnabled = true;
-            this.list_Räume.Location = new System.Drawing.Point(317, 188);
+            this.list_Räume.Location = new System.Drawing.Point(0, 27);
             this.list_Räume.Name = "list_Räume";
-            this.list_Räume.Size = new System.Drawing.Size(120, 95);
+            this.list_Räume.Size = new System.Drawing.Size(120, 160);
             this.list_Räume.TabIndex = 3;
+            this.list_Räume.SelectedIndexChanged += new System.EventHandler(this.list_Räume_SelectedIndexChanged);
+            this.list_Räume.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.list_Räume_MouseDoubleClick);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(329, 42);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11});
+            this.listView1.Enabled = false;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(128, 86);
+            this.listView1.Name = "listView1";
+            this.listView1.Scrollable = false;
+            this.listView1.Size = new System.Drawing.Size(660, 29);
+            this.listView1.TabIndex = 5;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "8:00";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "9:00";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "10:00";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "11:00";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "12:00";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "13:00";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "14:00";
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "15:00";
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "16:00";
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "17:00";
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "18:00";
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(128, 121);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(660, 20);
+            this.panel1.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 191);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.list_Räume);
-            this.Controls.Add(this.btn_Raum208);
-            this.Controls.Add(this.btn_207);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
             this.Text = "5";
@@ -143,9 +220,21 @@
         private System.Windows.Forms.ToolStripMenuItem übersichtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anlegenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
-        private System.Windows.Forms.Button btn_Raum208;
-        private System.Windows.Forms.Button btn_207;
         private System.Windows.Forms.ListBox list_Räume;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

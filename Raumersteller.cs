@@ -13,6 +13,7 @@ namespace Raumplaner
     public partial class Raumersteller : Form
     {
         private Form1 baseForm;
+        
         public Raumersteller(Form1 form)
         {
             InitializeComponent();
@@ -22,13 +23,28 @@ namespace Raumplaner
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            baseForm.AddToRäumeList(new Raum(Properties.Resources.Raum_2_0_7, "Raum 2.0.7", 4, 2, true));
+            Raum raumNeu = new Raum(img_Raum.Image, txt_Name.Text, Convert.ToInt32(txt_Kapazität.Text), Convert.ToInt32(txt_Tischzahl.Text), false);          
+            if (rb_no.Checked) raumNeu.beamer = false;
+            if (rb_yes.Checked) raumNeu.beamer = true;
+            baseForm.AddToRäumeList(raumNeu);
             this.Dispose();
         }
 
         private void img_Raum_Click(object sender, EventArgs e)
         {
-            openFileDialog.ShowDialog();
+          DialogResult result =  openFileDialog.ShowDialog();
+
+            try
+            {
+                img_Raum.Image = Image.FromFile(openFileDialog.FileName);
+                lb_Hinzufügen.Visible = false;
+            }
+            catch
+            {
+                openFileDialog.Dispose();
+            }
+            
         }
+
     }
 }

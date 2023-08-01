@@ -14,6 +14,7 @@ namespace Raumplaner
     public partial class Form1 : Form
     {
         private List<Raum> räume = new List<Raum>();
+        private int ListIndex;
         public Form1()
         {
             InitializeComponent();
@@ -24,23 +25,7 @@ namespace Raumplaner
             
         }
 
-        private void btn_Raum207_Click(object sender, EventArgs e)
-        {
-            Raumansicht raum = new Raumansicht();
-            raum.Text = (sender as Control).Text;
-            raum.Show();
-            raum.Raumbild.Image = Properties.Resources.Raum_2_0_7;
-            raum.Raumname.Text = (sender as Control).Text;
-        }
-
-        private void btn_Raum208_Click(object sender, EventArgs e)
-        {
-            Raumansicht raum = new Raumansicht();
-            raum.Text = (sender as Control).Text;
-            raum.Show();
-            raum.Raumbild.Image = Properties.Resources.Raum_2_0_8;
-            raum.Raumname.Text = (sender as Control).Text;
-        }
+       
 
         private void anlegenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -61,6 +46,23 @@ namespace Raumplaner
         {
             räume.Add(raum);
             RefreshRäumeList(); 
+        }
+
+        private void list_Räume_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           ListIndex = list_Räume.SelectedIndex;
+        }
+
+        private void list_Räume_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Raumansicht raum = new Raumansicht(räume[ListIndex]);
+            raum.Text = (sender as Control).Text;
+            raum.Show();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(dateTimePicker1.Value.ToString());
         }
     }
 }

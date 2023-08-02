@@ -74,6 +74,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Raum.cs" />
+    <Compile Include="Termin_Erstellen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Termin_Erstellen.Designer.cs">
+      <DependentUpon>Termin_Erstellen.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Raumersteller.resx">
       <DependentUpon>Raumersteller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Termin_Erstellen.resx">
+      <DependentUpon>Termin_Erstellen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\Form1.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />

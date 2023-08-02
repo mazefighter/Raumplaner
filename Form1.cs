@@ -20,10 +20,7 @@ namespace Raumplaner
             InitializeComponent();
         }
 
-        private void buchenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
        
 
@@ -51,6 +48,36 @@ namespace Raumplaner
         private void list_Räume_SelectedIndexChanged(object sender, EventArgs e)
         {
            ListIndex = list_Räume.SelectedIndex;
+            try
+            {
+                LadeTermine(räume[ListIndex]);
+            }
+            catch
+            {
+
+            }
+
+            
+        }
+        public void LadeTermine(Raum raum)
+        {
+            panel1.Controls.Clear();
+            int i = 0;
+            foreach(Termin termin in raum.buchungen)
+            {
+                if(termin.Time().Year == dateTimePicker1.Value.Year&& termin.Time().Month == dateTimePicker1.Value.Month && termin.Time().Day == dateTimePicker1.Value.Day)
+                {
+                    Label lbl = new Label();
+                    panel1.Controls.Add(lbl);
+                    lbl.Name = "btn_" + i;
+                    lbl.Text = termin.titel;
+                    lbl.AutoSize = false;
+                    lbl.Location = new Point(termin.startDateAsNumber(), 0);
+                    lbl.Size = new Size(termin.endDateAsNumber(), 20);
+                    lbl.BackColor = termin.color;
+                    lbl.TextAlign = ContentAlignment.MiddleCenter;
+                }                           
+            }
         }
 
         private void list_Räume_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -62,7 +89,15 @@ namespace Raumplaner
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(dateTimePicker1.Value.ToString());
+            LadeTermine(räume[ListIndex]);
+        }
+     
+
+        private void button_hinzufuegen_Click(object sender, EventArgs e)
+        {
+
+            Termin_Erstellen erstellen = new Termin_Erstellen(räume[ListIndex], this);
+            erstellen.Show();
         }
     }
 }

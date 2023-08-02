@@ -14,6 +14,8 @@ namespace Raumplaner
         public int kapazität;
         public int tischzahl;
         public bool beamer;
+
+        public List<Termin> buchungen = new List<Termin>();
         public Raum(Image RaumBild, string Raumname, int Kapazität, int Tischzahl, bool Beamer) 
         { 
             bild = RaumBild;
@@ -22,7 +24,5 @@ namespace Raumplaner
             tischzahl = Tischzahl;
             beamer = Beamer;
         }
-
-        
     }
 }

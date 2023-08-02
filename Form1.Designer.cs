@@ -30,8 +30,6 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buchenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.übersichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anlegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.list_Räume = new System.Windows.Forms.ListBox();
@@ -49,6 +47,7 @@
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_hinzufügen = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,38 +64,23 @@
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.buchenToolStripMenuItem,
-            this.übersichtToolStripMenuItem,
             this.anlegenToolStripMenuItem,
             this.löschenToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.menuToolStripMenuItem.Text = "Räume";
             // 
-            // buchenToolStripMenuItem
-            // 
-            this.buchenToolStripMenuItem.Name = "buchenToolStripMenuItem";
-            this.buchenToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.buchenToolStripMenuItem.Text = "Termin hinzufügen/löschen";
-            this.buchenToolStripMenuItem.Click += new System.EventHandler(this.buchenToolStripMenuItem_Click);
-            // 
-            // übersichtToolStripMenuItem
-            // 
-            this.übersichtToolStripMenuItem.Name = "übersichtToolStripMenuItem";
-            this.übersichtToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.übersichtToolStripMenuItem.Text = "Übersicht";
-            // 
             // anlegenToolStripMenuItem
             // 
             this.anlegenToolStripMenuItem.Name = "anlegenToolStripMenuItem";
-            this.anlegenToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.anlegenToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.anlegenToolStripMenuItem.Text = "Anlegen";
             this.anlegenToolStripMenuItem.Click += new System.EventHandler(this.anlegenToolStripMenuItem_Click);
             // 
             // löschenToolStripMenuItem
             // 
             this.löschenToolStripMenuItem.Name = "löschenToolStripMenuItem";
-            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.löschenToolStripMenuItem.Text = "Löschen";
             // 
             // list_Räume
@@ -193,17 +177,29 @@
             this.panel1.Size = new System.Drawing.Size(660, 20);
             this.panel1.TabIndex = 6;
             // 
+            // btn_hinzufügen
+            // 
+            this.btn_hinzufügen.Location = new System.Drawing.Point(128, 156);
+            this.btn_hinzufügen.Name = "btn_hinzufügen";
+            this.btn_hinzufügen.Size = new System.Drawing.Size(109, 23);
+            this.btn_hinzufügen.TabIndex = 7;
+            this.btn_hinzufügen.Text = "Termin hinzufügen";
+            this.btn_hinzufügen.UseVisualStyleBackColor = true;
+            this.btn_hinzufügen.Click += new System.EventHandler(this.button_hinzufuegen_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 191);
+            this.Controls.Add(this.btn_hinzufügen);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.list_Räume);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "5";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -216,8 +212,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buchenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem übersichtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anlegenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
         private System.Windows.Forms.ListBox list_Räume;
@@ -235,6 +229,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_hinzufügen;
     }
 }
 

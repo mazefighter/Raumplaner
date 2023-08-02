@@ -28,7 +28,7 @@ namespace Raumplaner
             {
                 lb_showBeamer.Text = "Nein";
             }
-            img_Raum.Image = raum.bild;
+            img_Raum.Image = Image.FromFile(raum.path);
         }
 
 

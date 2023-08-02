@@ -29,7 +29,7 @@ namespace Raumplaner
         private void btn_löschen_Click(object sender, EventArgs e)
         {
             raum.buchungen.RemoveAt(list_Termine.SelectedIndex);
-            form.LadeTermine(form.räume[form.ListIndex]);
+            form.LadeTermine(form.raumlist.räume[form.ListIndex]);
             this.Dispose();
         }
     }

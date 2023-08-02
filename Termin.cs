@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace Raumplaner
 {
+    [Serializable]
     public class Termin
     {
         public DateTime startdate;
         public DateTime enddate;
         public string titel;
-        public Color color;
+        public int r;
+        public int g;
+        public int b;
 
-        public Termin(string titel,DateTime startdate, DateTime enddate, Color color)
+        public Termin()
         {
-            this.startdate = startdate;
-            this.enddate = enddate;
-            this.titel = titel;
-            this.color = color;
+            
         }
 
         public int startDateAsNumber()

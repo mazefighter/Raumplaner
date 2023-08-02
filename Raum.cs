@@ -7,32 +7,32 @@ using System.Threading.Tasks;
 
 namespace Raumplaner
 {
+    [Serializable]
     public class Raum
     {
-        public Image bild;
+        public string path;
         public string name;
         public int kapazität;
         public int tischzahl;
         public bool beamer;
 
         public List<Termin> buchungen = new List<Termin>();
-        public Raum(Image RaumBild, string Raumname, int Kapazität, int Tischzahl, bool Beamer) 
+        public Raum() 
         { 
-            bild = RaumBild;
+                       
+        }
+
+
+        public void neueWerte(string RaumBildPath, string Raumname, int Kapazität, int Tischzahl, bool Beamer)
+        {
+            path = RaumBildPath;
             name = Raumname;
             kapazität = Kapazität;
             tischzahl = Tischzahl;
             beamer = Beamer;
         }
 
-        public void neueWerte(Image RaumBild, string Raumname, int Kapazität, int Tischzahl, bool Beamer)
-        {
-            bild = RaumBild;
-            name = Raumname;
-            kapazität = Kapazität;
-            tischzahl = Tischzahl;
-            beamer = Beamer;
-        }
+        
 
        
     }

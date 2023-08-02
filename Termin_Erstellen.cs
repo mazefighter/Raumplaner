@@ -35,6 +35,7 @@ namespace Raumplaner
                 }
             }
             if (dateBeginn == dateEnd) return;
+            if (dateBeginn.Hour < 8 || dateEnd.Hour > 18) return;
             raum.buchungen.Add(new Termin(txt_Name.Text,dateBeginn,dateEnd,lbl_Color.BackColor));
 
             form.LadeTermine(raum);

@@ -13,8 +13,8 @@ namespace Raumplaner
 {
     public partial class Form1 : Form
     {
-        private List<Raum> räume = new List<Raum>();
-        private int ListIndex;
+        public List<Raum> räume = new List<Raum>();
+        public int ListIndex;
         public Form1()
         {
             InitializeComponent();
@@ -95,9 +95,52 @@ namespace Raumplaner
 
         private void button_hinzufuegen_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Termin_Erstellen erstellen = new Termin_Erstellen(räume[ListIndex], this);
+                erstellen.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Lege zuerst einen Raum an");
+            }
+        }
 
-            Termin_Erstellen erstellen = new Termin_Erstellen(räume[ListIndex], this);
-            erstellen.Show();
+        private void btn_bearbeiten_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Raum tempRaum = räume[ListIndex];
+                Raumersteller erstellen = new Raumersteller(this);
+                erstellen.SetEverything(tempRaum.bild, tempRaum.name, tempRaum.kapazität.ToString(), tempRaum.tischzahl.ToString(), tempRaum.beamer);
+                erstellen.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Lege zuerst einen Raum an");
+            }
+            
+            
+        }
+
+        private void btn_löschen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                räume.RemoveAt(ListIndex);
+                RefreshRäumeList();
+            }
+            catch
+            {
+                MessageBox.Show("Lege zuerst einen Raum an");
+            }
+            
+        }
+
+        private void btn_TerminLöschen_Click(object sender, EventArgs e)
+        {
+            TerminLöschen löschen = new TerminLöschen(räume[ListIndex], this);
+            löschen.Show();
         }
     }
 }

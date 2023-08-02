@@ -24,5 +24,16 @@ namespace Raumplaner
             tischzahl = Tischzahl;
             beamer = Beamer;
         }
+
+        public void neueWerte(Image RaumBild, string Raumname, int Kapazität, int Tischzahl, bool Beamer)
+        {
+            bild = RaumBild;
+            name = Raumname;
+            kapazität = Kapazität;
+            tischzahl = Tischzahl;
+            beamer = Beamer;
+        }
+
+       
     }
 }

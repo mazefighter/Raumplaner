@@ -52,7 +52,6 @@
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(148, 20);
             this.txt_Name.TabIndex = 1;
-
             // 
             // dtp_Termin
             // 
@@ -169,7 +168,7 @@
             // 
             // lbl_Color
             // 
-            this.lbl_Color.BackColor = System.Drawing.Color.Black;
+            this.lbl_Color.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lbl_Color.Location = new System.Drawing.Point(51, 57);
             this.lbl_Color.Name = "lbl_Color";
             this.lbl_Color.Size = new System.Drawing.Size(39, 13);

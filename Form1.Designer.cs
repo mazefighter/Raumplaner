@@ -31,7 +31,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anlegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.list_Räume = new System.Windows.Forms.ListBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -48,6 +47,9 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_hinzufügen = new System.Windows.Forms.Button();
+            this.btn_löschen = new System.Windows.Forms.Button();
+            this.btn_bearbeiten = new System.Windows.Forms.Button();
+            this.btn_TerminLöschen = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,8 +66,7 @@
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.anlegenToolStripMenuItem,
-            this.löschenToolStripMenuItem});
+            this.anlegenToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.menuToolStripMenuItem.Text = "Räume";
@@ -73,15 +74,9 @@
             // anlegenToolStripMenuItem
             // 
             this.anlegenToolStripMenuItem.Name = "anlegenToolStripMenuItem";
-            this.anlegenToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.anlegenToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.anlegenToolStripMenuItem.Text = "Anlegen";
             this.anlegenToolStripMenuItem.Click += new System.EventHandler(this.anlegenToolStripMenuItem_Click);
-            // 
-            // löschenToolStripMenuItem
-            // 
-            this.löschenToolStripMenuItem.Name = "löschenToolStripMenuItem";
-            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.löschenToolStripMenuItem.Text = "Löschen";
             // 
             // list_Räume
             // 
@@ -187,11 +182,44 @@
             this.btn_hinzufügen.UseVisualStyleBackColor = true;
             this.btn_hinzufügen.Click += new System.EventHandler(this.button_hinzufuegen_Click);
             // 
+            // btn_löschen
+            // 
+            this.btn_löschen.Location = new System.Drawing.Point(679, 156);
+            this.btn_löschen.Name = "btn_löschen";
+            this.btn_löschen.Size = new System.Drawing.Size(109, 23);
+            this.btn_löschen.TabIndex = 8;
+            this.btn_löschen.Text = "Raum löschen";
+            this.btn_löschen.UseVisualStyleBackColor = true;
+            this.btn_löschen.Click += new System.EventHandler(this.btn_löschen_Click);
+            // 
+            // btn_bearbeiten
+            // 
+            this.btn_bearbeiten.Location = new System.Drawing.Point(564, 156);
+            this.btn_bearbeiten.Name = "btn_bearbeiten";
+            this.btn_bearbeiten.Size = new System.Drawing.Size(109, 23);
+            this.btn_bearbeiten.TabIndex = 9;
+            this.btn_bearbeiten.Text = "Raum bearbeiten";
+            this.btn_bearbeiten.UseVisualStyleBackColor = true;
+            this.btn_bearbeiten.Click += new System.EventHandler(this.btn_bearbeiten_Click);
+            // 
+            // btn_TerminLöschen
+            // 
+            this.btn_TerminLöschen.Location = new System.Drawing.Point(243, 156);
+            this.btn_TerminLöschen.Name = "btn_TerminLöschen";
+            this.btn_TerminLöschen.Size = new System.Drawing.Size(109, 23);
+            this.btn_TerminLöschen.TabIndex = 10;
+            this.btn_TerminLöschen.Text = "Termin löschen";
+            this.btn_TerminLöschen.UseVisualStyleBackColor = true;
+            this.btn_TerminLöschen.Click += new System.EventHandler(this.btn_TerminLöschen_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 191);
+            this.Controls.Add(this.btn_TerminLöschen);
+            this.Controls.Add(this.btn_bearbeiten);
+            this.Controls.Add(this.btn_löschen);
             this.Controls.Add(this.btn_hinzufügen);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listView1);
@@ -213,7 +241,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anlegenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
         private System.Windows.Forms.ListBox list_Räume;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ListView listView1;
@@ -230,6 +257,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_hinzufügen;
+        private System.Windows.Forms.Button btn_löschen;
+        private System.Windows.Forms.Button btn_bearbeiten;
+        private System.Windows.Forms.Button btn_TerminLöschen;
     }
 }
 
